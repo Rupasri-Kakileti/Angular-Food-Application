@@ -1,0 +1,49 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* Adjust width as needed; ensure it fits 5 cards per row */
+  width: 250px; /* Full width of the column */
+  max-width: 500px; /* Adjust this value based on your needs */
+  margin: 0 auto; /* Center cards horizontally within column */
+}
+
+.foodstuffs-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.list-group-item {
+  padding: 0;
+/* Space below each item */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.col-md-2 {
+  flex: 0 0 20%; /* Adjusts the column width to fit 5 per row */
+  max-width: 20%;
+  padding:10px; 
+  box-sizing: border-box;/* Ensures the column doesn’t exceed 20% of the container width */
+}
+.container {
+  /* Center horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  width: 100%; /* Full width */
+  margin: 0 auto; /* Center container */
+  padding: 0 15px;
+}
+
+.mb-4 {
+  margin-bottom: 3rem; /* Margin below the heading */
+  font-family: 'Times New Roman', serif; /* Change font style */
+  font-size: 2rem; /* Font size */
+  color: #333; /* Text color */
+}

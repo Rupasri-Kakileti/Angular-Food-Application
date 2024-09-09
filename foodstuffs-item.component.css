@@ -1,0 +1,21 @@
+.foodstuffs-image {
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+  }
+  .card-price {
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #555; /* Adjust color as needed */
+    margin-top: 0.5rem; /* Space between description and price */
+  }
+  
+  .card-rating {
+    margin-top: 0.5rem; /* Space above the rating section */
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #f39c12; /* Color for the filled stars */
+  }
+  
+  .card-rating .rating-text {
+    font-size: 0.9rem; /* Adjust size for the rating text */
+    color: #777; /* Color for the rating text */
+  }
+  

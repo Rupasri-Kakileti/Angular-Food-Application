@@ -1,0 +1,10 @@
+  /* Additional Navbar Styling */
+  .nav-link-large {
+    font-size: 1.25rem; /* Adjust the size as needed */
+  }
+  .navbar-brand-red {
+    color: orangered;
+  }
+  .hide-header {
+    display: none;
+  }

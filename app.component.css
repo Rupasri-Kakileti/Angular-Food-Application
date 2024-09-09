@@ -1,0 +1,34 @@
+/* Apply background image only when 'background-image' class is present */
+.background-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust height as needed */
+    width: 250vh; /* Adjust width as needed */
+    /* Remove any default margin */
+    margin-right: 80%;
+    text-align: center; /* Center text alignment */
+    background-image: url('https://img.freepik.com/free-photo/top-view-assortment-with-food-frame-tableware_23-2148247890.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: #fff; /* Change text color for readability */
+    position: relative;
+  }
+  
+  /* Style the welcome text */
+  .welcome-text {
+    font-size: 3rem; /* Large text size */
+    font-weight: bold; /* Makes text bold */
+    padding: 0; /* Add padding around the text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for readability */
+    text-align: center;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .welcome-text {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+  }
+  

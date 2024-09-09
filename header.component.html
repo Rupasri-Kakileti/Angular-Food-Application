@@ -1,0 +1,35 @@
+<div *ngIf="isAuthenticated">
+<nav class="navbar navbar-expand-lg bg-white">
+    <!--HEADER-->
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand fs-2 fw-bold me-5 navbar-brand-red" routerLink="/">Cravezy</a> <!-- Link to Home -->
+        </div>
+        <!--items-->
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a routerLink="/foodstuffs" routerLinkActive="active" class="nav-link-large" style="padding-right: 50px;">Foodstuffs</a></li>
+                <li><a routerLink="/groceries" routerLinkActive="active" class="nav-link-large" style="padding-right: 20px;">Groceries</a></li>
+            </ul>
+        <!-- Search Form -->
+        <form (ngSubmit)="onSearch()" class="d-flex ms-auto me-3" role="search">
+            <input [(ngModel)]="searchQuery" name="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+                 
+              
+              <!--Dropdown-->
+        <ul class="nav navbar-nav ms-auto">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Manage <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a [routerLink]="['/cart']">View cart</a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

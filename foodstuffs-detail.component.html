@@ -1,0 +1,27 @@
+<div class="container mt-4">
+    <h2 class="mb-4">Your Cart</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let item of cartItems">
+        <div class="card">
+          <img [src]="item.imagePath" class="card-img-top foodstuffs-image" alt="{{ item.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+            <p class="card-price">{{ item.price | currency:'INR':'symbol' }}</p>
+            <div class="card-rating">
+              <span *ngFor="let _ of getStars(item.rating)" class="star filled">&#9733;</span>
+              <span *ngFor="let _ of getEmptyStars(item.rating)" class="star empty">&#9734;</span>
+              <span class="rating-text">({{ item.rating?.toFixed(1) }})</span>
+            </div>
+            <button class="btn btn-danger" (click)="removeFromCart(item)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Bill Details Section -->
+  <div class="bill-details mt-4">
+    <h3>Bill Details</h3>
+    <p>Total Price: {{ getTotalPrice() | currency:'INR':'symbol' }}</p>
+  </div>
+  </div>
+  

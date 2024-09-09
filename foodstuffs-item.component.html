@@ -1,0 +1,22 @@
+<div class="container mt-4">
+    <h2 class="mb-4">{{ filteredFoodstuffs.length ? filteredFoodstuffs[0].name.split(' ')[1] : 'No Items Found' }}</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let foodstuff of filteredFoodstuffs">
+        <div class="card">
+          <img [src]="foodstuff.imagePath" class="card-img-top foodstuffs-image" alt="{{ foodstuff.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ foodstuff.name }}</h5>
+            <p class="card-text">{{ foodstuff.description }}</p>
+            <p class="card-price">{{ foodstuff.price | currency:'INR':'symbol' }}</p>
+            <div class="card-rating">
+              <span *ngFor="let star of getStars(foodstuff.rating)">&#9733;</span>
+              <span *ngFor="let star of getEmptyStars(foodstuff.rating)">&#9734;</span>
+              <span class="rating-text">({{ foodstuff.rating.toFixed(1) }})</span>
+            </div>
+            <button class="btn btn-primary" (click)="addToCart(foodstuff)">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
